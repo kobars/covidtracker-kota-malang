@@ -6,7 +6,12 @@ const TwitterCard = ({ content }) => {
           <div className="card-title">
             <h2>
               <span className="pr-3">
-                <img src="./svg/twitter.svg" width="26" height="26" />
+                <img
+                  alt="twitter-icon"
+                  src="./svg/twitter.svg"
+                  width="26"
+                  height="26"
+                />
               </span>
               Pemkot Malang
             </h2>
