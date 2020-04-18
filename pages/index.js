@@ -173,7 +173,8 @@ const App = ({ kecamatan, originalMark, news }) => {
         <div className="container mt-3 mb-5 pb-5">
           <div className="slider d-flex justify-content-center">
             <Slider
-              ariaLabelledByForHandle="slider-handle"
+              ariaLabelledByForHandle="slider-label"
+              ariaLabelForHandle="slider-handle"
               value={chosenIndex}
               disabled={isEmpty(highlightedProperties)}
               min={0}
