@@ -228,7 +228,7 @@ const App = ({ kecamatan, originalMark, news }) => {
 }
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.baseUrl
+  const baseUrl = process.env.ENV.baseUrl
   // Fetch and process data from external API (for Maps)
   const response = await axios(`${baseUrl}kota-malang`)
   const kecamatanData = response.data[0]

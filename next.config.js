@@ -4,6 +4,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   env: {
-    baseUrl: process.env.baseUrl
+    ENV: process.env
   }
 })
