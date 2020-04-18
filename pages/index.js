@@ -41,9 +41,7 @@ const App = ({ kecamatan, originalMark, news }) => {
   const [marks, setMarks] = useState(originalMark)
   const [rawData, setRawData] = useState(kecamatan.features[0].properties)
 
-  const mapboxAccessToken =
-    'pk.eyJ1Ijoia29iYXJzIiwiYSI6ImNrOTBqanYzYTAwdjIzbG4wdG92YWh0bjQifQ.MDpZYR_qs0TX-W8CJGeQxA'
-  const url = `https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`
+  const layerUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
   const mapRef = useRef(null)
 
   const zoomToFeature = feature => {
@@ -162,7 +160,7 @@ const App = ({ kecamatan, originalMark, news }) => {
             featureStyle={featureStyle}
             onEachFeature={eventEachFeature}
             mapRef={mapRef}
-            url={url}
+            url={layerUrl}
           />
         </div>
         <div className="col-lg-6">

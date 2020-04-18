@@ -12,12 +12,7 @@ const Maps = props => {
         }}
         ref={props.mapRef}
       >
-        <TileLayer
-          url={props.url}
-          attribution=""
-          maxZoom={18}
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        <TileLayer attribution="" maxZoom={18} url={props.url} />
         <GeoJSON
           data={props.data}
           style={props.featureStyle}
