@@ -228,7 +228,8 @@ const App = ({ kecamatan, originalMark, news }) => {
 }
 
 export async function getServerSideProps() {
-  const baseUrl = process.env.ENV.baseUrl
+  const baseUrl =
+    process.env.ENV.baseUrl || 'https://5e9921015eabe7001681c784.mockapi.io/'
   // Fetch and process data from external API (for Maps)
   const response = await axios(`${baseUrl}kota-malang`)
   const kecamatanData = response.data[0]
