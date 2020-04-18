@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import axios from 'axios'
 import {
@@ -140,6 +141,16 @@ const App = ({ kecamatan, originalMark, news }) => {
     }
   }
 
+  const AppHead = () => (
+    <Head>
+      <title>Covid App Kota Malang</title>
+      <meta
+        name="description"
+        content="Covid tracker kota Malang per kecamatan"
+      />
+    </Head>
+  )
+
   useEffect(() => {
     const defaultCasesLength = rawData.cases.length
     setTimeline(defaultCasesLength - 1)
@@ -150,6 +161,7 @@ const App = ({ kecamatan, originalMark, news }) => {
 
   return (
     <div className="container-fluid pt-0 mt-1">
+      <AppHead />
       <div className="row">
         <div className="col-lg-6 ">
           <Maps
@@ -216,7 +228,7 @@ const App = ({ kecamatan, originalMark, news }) => {
 }
 
 export async function getServerSideProps() {
-  const baseUrl = 'https://5e9921015eabe7001681c784.mockapi.io/'
+  const baseUrl = process.env.baseUrl
   // Fetch and process data from external API (for Maps)
   const response = await axios(`${baseUrl}kota-malang`)
   const kecamatanData = response.data[0]
