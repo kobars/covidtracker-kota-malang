@@ -22,7 +22,7 @@ const TwitterCard = ({ content }) => {
             width: 400px !important;
             text-align: left;
             box-shadow: -1px 15px 30px -12px black;
-            max-height: 400px;
+            max-height: 300px;
           }
         `}</style>
       </div>
