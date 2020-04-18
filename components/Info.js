@@ -5,7 +5,7 @@ const Info = props => {
   const { name, cases } = props.properties
   const chosenIndex = props.index
   return (
-    <div className="card text-white bg-dark overflow-auto">
+    <div className="card text-white bg-dark">
       <div className="card-header">
         <h3>{name !== undefined ? `Kecamatan ${name}` : 'Kota Malang'}</h3>
       </div>
