@@ -19,6 +19,29 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+
+## Run Production
+
+Build Production
+
+```
+npm run build
+# or
+yarn run build
+```
+
+and then
+
+
+```bash
+npm run start
+# or
+yarn run start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
