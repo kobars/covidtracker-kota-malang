@@ -1,5 +1,7 @@
 # Simple Covid Tracker Kota Malang per Kecamatan
 
+### [LIVE DEMO](https://covidtracker-kota-malang.kobar.now.sh/)
+
 ![demo](https://github.com/kobars/covidtracker-kota-malang/blob/master/Demo.gif)
 
 
